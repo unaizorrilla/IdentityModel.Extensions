@@ -1,0 +1,15 @@
+*.cmd text
+*.cs text
+*.config text
+*.ruleset text
+*.Stylecop text
+*.resx text merge=union
+
+*.png binary
+*.jpg binary
+*.bmp binary
+*.gif binary
+*.sdf binary
+
+*.csproj text merge=union 
+*.sln text eol=crlf merge=union
