@@ -1,7 +1,7 @@
 #ignore thumbnails created by windows
 Thumbs.db
 #custom files needed
-!.\tools\*.*
+!tools\*.exe
 !NuGet.exe
 #Ignore files build by Visual Studio
 *.sdf
