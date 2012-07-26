@@ -2,6 +2,7 @@
 Thumbs.db
 #custom files needed
 !.\tools\*.*
+!NuGet.exe
 #Ignore files build by Visual Studio
 *.sdf
 *.obj
