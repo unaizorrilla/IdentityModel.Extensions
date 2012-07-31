@@ -54,19 +54,28 @@ function Set-LocalSTSProfile
         [string] $ProfileName
     )
    
+    Write-Host "Stoping LocalSTS process" ;
+    
+    stop-process -processname localsts 
+    
     $project = Get-Project;
     $path = Split-Path $project.FullName;
     
-    $profilepath = Join-Path $path ($ProfileName + ".stsprofile")
-    $localstspath = Join-Path $path "LocalSTS.exe.config"
+    $profilepath = Join-Path $path ($ProfileName + ".stsprofile");
+    $localstspath = Join-Path $path "LocalSTS.exe.config";
+    
     if ( Test-Path $profilepath ){
+    
         Copy-Item $profilePath $localstspath
+        
+        Write-Host "The  profile " $ProfileName " is now configured in LocalSTS";
     }
     else{
-    
+   
         Write-Host "The profile not exist";
         Write-Host "Please use Get-LocalSTSProfiles for get a list of current stored local sts profiles";
     }
+    
     
     
 }
