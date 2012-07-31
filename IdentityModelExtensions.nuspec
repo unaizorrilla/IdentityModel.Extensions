@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>IdentityModelExtensions</id>
+    <version>1.0.0</version>
+    <authors>Unai Zorrilla</authors>
+    <owners>Unai Zorrilla</owners>
+    <licenseUrl>https://github.com/unaizorrilla/IdentityModel.Extensions</licenseUrl>
+    <projectUrl>https://github.com/unaizorrilla/IdentityModel.Extensions</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A collection of nuget console power shell extensions to work with Local STS</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright 2012</copyright>
+    <tags>IdentityModel Identity Security LocalSTS STS</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>

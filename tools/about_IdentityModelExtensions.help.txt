@@ -1,0 +1,20 @@
+TOPIC
+    about_IdentityModelExtensions
+
+SHORT DESCRIPTION
+    Provides information about IdentityModelExtensions commands.
+
+LONG DESCRIPTION
+    This topic describes the IdentityModelExtensions commands. IdentityModelExtensions is a collection 
+of extensions over Identity and Access Tools for Visual Studio 2012
+
+
+    The following IdentityModelExtensions  cmdlets are included.
+
+        Cmdlet                        Description
+        -----------------             ---------------------------------------------------
+        Save-CurrentLocalSTSProfile   Save the current local sts profile with a name for reuse
+
+       
+SEE ALSO
+    Save-CurrentLocalSTSProfile
