@@ -17,8 +17,10 @@ function Save-CurrentLocalSTSProfile
         [parameter(ParameterSetName = 'ProfileName')]
         [string] $ProfileName
     )
+    
+    $project = Get-Project
 
-   Write-Host "executed save-CurrentLocalSTSProfile with " + $ProfileName + "as the profile name";
+   Write-Host $project.FullName
 }
 
 Export-ModuleMember @( 'Save-CurrentLocalSTSProfile')
