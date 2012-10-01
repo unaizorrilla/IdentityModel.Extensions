@@ -25,6 +25,7 @@ function Save-CurrentLocalSTSProfile
     
         $filename = "LocalSTS.exe.config"
         $currentpath = Join-Path $path $filename
+
         Save-Copy $currentpath $ProfileName
         
     }
@@ -56,7 +57,7 @@ function Set-LocalSTSProfile
    
     Write-Host "Stoping LocalSTS process" ;
     
-    stop-process -processname localsts 
+    stop-process -processname localsts -ErrorAction SilentlyContinue
     
     $project = Get-Project;
     $path = Split-Path $project.FullName;
@@ -66,8 +67,18 @@ function Set-LocalSTSProfile
     
     if ( Test-Path $profilepath ){
     
-        Copy-Item $profilePath $localstspath
-        
+        $sourceXml  = [xml](get-content $profilepath);
+        $targetXml = [xml](get-content $localstspath);
+
+        $claimsNodeSource = $sourceXml.SelectNodes("configuration/localSTSConfiguration/claims").Item(0);
+        $claimsNodeTarget = $targetXml.SelectNodes("configuration/localSTSConfiguration/claims").Item(0);
+
+       
+        #change the inner xml
+        $claimsNodeTarget.InnerXml = $claimsNodeSource.InnerXml;
+
+        $targetXml.Save($localstspath);
+
         Write-Host "The  profile " $ProfileName " is now configured in LocalSTS";
     }
     else{

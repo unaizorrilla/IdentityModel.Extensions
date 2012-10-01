@@ -14,8 +14,8 @@ of extensions over Identity and Access Tools for Visual Studio 2012
         Cmdlet                        Description
         -----------------             ---------------------------------------------------
         Save-CurrentLocalSTSProfile   Save the current local sts profile with a name for reuse
-	    Get-LocalSTSProfiles          Show all local sts profiles stored in project
-	    Set-LocalSTSProfile           Set stored profile as current profile for local sts
+	Get-LocalSTSProfiles          Show all local sts profiles stored in project
+	Set-LocalSTSProfile           Set stored profile as current profile for local sts
 
        
 SEE ALSO
